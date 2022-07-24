@@ -1,55 +1,44 @@
-import conans, os
+from conan import ConanFile
+from conan.tools.cmake import CMakeToolchain, CMake, cmake_layout
 
-class Adapter(conans.ConanFile):
-    # Package and Src information
+
+class AdapterDesignPatternConan(ConanFile):
     name = "adapter_design_pattern"
-    author = "Ali Ibrahim, LIT"
     version = "main"
+
+    # Optional metadata
+    license = "(c) ALi Ibrahim"
+    author = "Ali Ibrahim allosheribraheem38@gmail.com"
     url = "https://github.com/AliIbrahim996/AdapterDesignPattern.git"
+    description = ""
 
-    license = "(c) 2022 LIT"
-    description = "See README.md"
-
-    # Binary relevant attributes
+    # Binary configuration
     settings = "os", "compiler", "build_type", "arch"
+    options = {"shared": [True, False], "fPIC": [True, False]}
+    default_options = {"shared": False, "fPIC": True}
 
-    generators = "cmake", "visual_studio"
+    # Sources are located in the same place as this recipe, copy them to the recipe
+    exports_sources = "CMakeLists.txt", "src/*", "include/*"
 
-    scm = {
-        "type": "git",
-        "url": "auto",
-        "revision": "auto",
-        "subfolder": "."
-    }
+    def config_options(self):
+        if self.settings.os == "Windows":
+            del self.options.fPIC
 
-    #https://docs.conan.io/en/latest/reference/conanfile/methods.html#build-requirements
-    def build_requirements(self):
-        self.build_requires("cmake_installer/3.22.3@sdfl-3rd/stable")
-        self.build_requires("doxygen_installer/1.8.16@bincrafters/stable")
-        self.build_requires("gtest/1.11.0-4@sdfl-3rd/stable")
+    def layout(self):
+        cmake_layout(self)
 
+    def generate(self):
+        tc = CMakeToolchain(self)
+        tc.generate()
 
-    #http://docs.conan.io/en/latest/reference/conanfile/methods.html#build
     def build(self):
-        cmake = conans.CMake(self)
+        cmake = CMake(self)
         cmake.configure()
         cmake.build()
-        if not conans.tools.cross_building(self.settings):
-            cmake.test(output_on_failure=True)
 
-    # http://docs.conan.io/en/latest/reference/conanfile/methods.html#package
     def package(self):
-        self.copy("readme.md")
-        self.copy("*.h", dst="include", src="include")
-        self.copy("*.hpp", dst="include", src="include")
-        self.copy("*.lib", dst="lib", src="lib", keep_path=False)
-        self.copy("*.a", dst="lib", src="lib", keep_path=False)
-        self.copy("*", dst="doc/html", src="html")
+        cmake = CMake(self)
+        cmake.install()
 
-    # http://docs.conan.io/en/latest/reference/conanfile/methods.html#package-info
     def package_info(self):
-        self.cpp_info.libs = [self.name]
-
-    def package_id(self):
-        for k in self.info.requires.pkg_names:
-            self.info.requires[k].full_package_mode()
+        self.cpp_info.libs = ["adapter_design_pattern"]
