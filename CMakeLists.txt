@@ -8,6 +8,3 @@ FILE(GLOB_RECURSE SOURCES src/*.cpp src/*.h src/*.hpp)
 
 add_library(adapter_design_pattern ${HEADERS} ${SOURCES})
 target_include_directories(adapter_design_pattern PUBLIC include)
-
-set_target_properties(adapter_design_pattern PROPERTIES PUBLIC_HEADER ${HEADERS})
-# install(TARGETS adapter_design_pattern)
