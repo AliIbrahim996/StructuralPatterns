@@ -1,6 +1,5 @@
 from conans import ConanFile, CMake, tools
 
-
 class AdapterDesignPatternConan(ConanFile):
     name = "adapter_design_pattern"
     version = "develop"

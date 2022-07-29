@@ -3,8 +3,6 @@
 #ifndef ADAPTER_INSTAGRAM_ADAPTER
 #define ADAPTER_INSTAGRAM_ADAPTER
 
-
-
 #include "ISocialAdapter.h"
 #include "Instagram.h"
 

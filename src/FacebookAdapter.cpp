@@ -1,6 +1,5 @@
 #include "FacebookAdapter.h"
 
-
 namespace Adapter
 {
 
