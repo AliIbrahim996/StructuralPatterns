@@ -5,6 +5,8 @@
 
 #include <string>
 
+namespace DesignPattern
+{
 namespace Adapter
 {
 namespace Facebook
@@ -23,5 +25,5 @@ void post_facebook_text(const std::string& text);
 
 }; // namespace Facebook
 } // namespace Adapter
-
+} // namespace DesignPattern
 #endif // !ADAPTER_FACBOOK_H

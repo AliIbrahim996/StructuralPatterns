@@ -1,5 +1,7 @@
-#include "FacebookAdapter.h"
+#include "adapter/FacebookAdapter.h"
 
+namespace DesignPattern
+{
 namespace Adapter
 {
 
@@ -19,3 +21,4 @@ void FacebookAdapter::post_text(const std::string& text)
 }
 
 } // namespace Adapter
+} // namespace DesignPattern

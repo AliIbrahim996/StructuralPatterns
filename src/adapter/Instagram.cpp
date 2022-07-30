@@ -1,6 +1,8 @@
 #include "adapter/Instagram.h"
 #include <iostream>
 
+namespace DesignPattern
+{
 namespace Adapter
 {
 namespace Instagram
@@ -17,3 +19,4 @@ void post_video(const std::string& video)
 
 } // namespace Instagram
 } // namespace Adapter
+} // namespace DesignPattern

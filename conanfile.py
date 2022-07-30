@@ -1,13 +1,13 @@
 from conans import ConanFile, CMake, tools
 
 class AdapterDesignPatternConan(ConanFile):
-    name = "adapter_design_pattern"
+    name = "StructuralPatterns"
     version = "develop"
 
     # Optional metadata
     license = "(c) ALi Ibrahim"
     author = "Ali Ibrahim allosheribraheem38@gmail.com"
-    url = "https://github.com/AliIbrahim996/AdapterDesignPattern.git"
+    url = "https://github.com/AliIbrahim996/StructuralPatterns.git"
     description = ""
 
     # Binary configuration
@@ -20,8 +20,8 @@ class AdapterDesignPatternConan(ConanFile):
 
     scm = {
         "type": "git",
-        "subfolder": "adapter_design_pattern",
-        "url": "https://github.com/AliIbrahim996/AdapterDesignPattern.git",
+        "subfolder": "StructuralPatterns",
+        "url": "https://github.com/AliIbrahim996/StructuralPatterns.git",
         "revision": "develop" 
      }
 
@@ -44,4 +44,4 @@ class AdapterDesignPatternConan(ConanFile):
         self.copy("*.a", dst="lib", keep_path=False)
 
     def package_info(self):
-        self.cpp_info.libs = ["adapter_design_pattern"]
+        self.cpp_info.libs = ["StructuralPatterns"]

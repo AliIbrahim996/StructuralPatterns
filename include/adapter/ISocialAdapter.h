@@ -5,6 +5,8 @@
 
 #include <string>
 
+namespace DesignPattern
+{
 namespace Adapter
 {
 class ISocialAdapter
@@ -24,5 +26,5 @@ public:
 
 }; // ISocialAdapter
 } // namespace Adapter
-
+} // namespace DesignPattern
 #endif // !ADAPTER_I_SOCIAL_ADAPTER_H

@@ -6,6 +6,8 @@
 #include "ISocialAdapter.h"
 #include "Instagram.h"
 
+namespace DesignPattern
+{
 namespace Adapter
 {
 class InstagramAdapter : public ISocialAdapter
@@ -26,5 +28,6 @@ public:
 
 }; //! InstagramAdapter
 } // namespace Adapter
+} // namespace DesignPattern
 
 #endif // !ADAPTER_INSTAGRAM_ADAPTER

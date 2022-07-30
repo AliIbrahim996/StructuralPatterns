@@ -6,6 +6,8 @@
 #include "Facebook.h"
 #include "ISocialAdapter.h"
 
+namespace DesignPattern
+{
 namespace Adapter
 {
 
@@ -26,5 +28,5 @@ public:
 
 }; //! FacebookAdapter
 } // namespace Adapter
-
+} // namespace DesignPattern
 #endif // !ADAPTER_FACBOOK_ADAPTER_H

@@ -1,5 +1,7 @@
 #include "adapter/InstagramAdapter.h"
 
+namespace DesignPattern
+{
 namespace Adapter
 {
 
@@ -16,3 +18,4 @@ void InstagramAdapter::post_text(const std::string&)
     throw std::runtime_error("post text is not supported in Instagram!\n");
 }
 } // namespace Adapter
+} // namespace DesignPattern
