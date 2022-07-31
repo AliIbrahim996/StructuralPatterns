@@ -5,6 +5,7 @@
 #define COMPOSITE_IFILE_H
 
 #include <string>
+#include <memory>
 
 namespace DesignPattern
 {
@@ -20,6 +21,7 @@ public:
         : name_{name} {};
     virtual void getInfo() = 0;
     virtual void add(std::unique_ptr<IFile>& file) = 0;
+    virtual ~IFile() = 0;
 };
 } // namespace Composite
 } // namespace DesignPattern

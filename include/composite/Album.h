@@ -5,7 +5,7 @@
 #define COMPOSITE_ALBUM_H
 
 #include "composite/IComponent.h"
-#include <vector>
+#include <list>
 
 namespace DesignPattern
 {
@@ -19,7 +19,7 @@ public:
     void addComponent(std::unique_ptr<IComponent>& component) override;
 
 private:
-    std::vector<std::unique_ptr<IComponent>> songs_{};
+    std::list<std::unique_ptr<IComponent>> songs_{};
 };
 } // namespace Composite
 } // namespace DesignPattern

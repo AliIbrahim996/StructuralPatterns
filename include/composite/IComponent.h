@@ -5,6 +5,7 @@
 #define COMPOSITE_ICOMPONENT_H
 
 #include <string>
+#include <memory>
 
 namespace DesignPattern
 {
@@ -18,6 +19,8 @@ public:
         : name_{name} {};
     virtual void displayInfo() = 0;
     virtual void addComponent(std::unique_ptr<IComponent>& component) = 0;
+
+    virtual ~IComponent() = 0;
 
 protected:
     std::string name_;
