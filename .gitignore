@@ -1,0 +1,7 @@
+/build*/
+/package*/
+/*info.*
+
+# IDE files
+.vscode/
+.idea/
