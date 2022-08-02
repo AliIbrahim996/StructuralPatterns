@@ -1,6 +1,6 @@
 from conans import ConanFile, CMake, tools
 
-class AdapterDesignPatternConan(ConanFile):
+class StructuralPatternsConan(ConanFile):
     name = "StructuralPatterns"
     version = "develop"
 
