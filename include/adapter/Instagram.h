@@ -1,5 +1,3 @@
-//! @file Dummy instagram app
-
 #ifndef ADAPTER_INSTAGRAM_H
 #define ADAPTER_INSTAGRAM_H
 

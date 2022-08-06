@@ -1,5 +1,7 @@
 #include "adapter/FacebookAdapter.h"
 
+#include "adapter/Facebook.h"
+
 namespace DesignPattern
 {
 namespace Adapter

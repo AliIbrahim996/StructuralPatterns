@@ -1,5 +1,5 @@
 #include "adapter/InstagramAdapter.h"
-
+#include "adapter/Instagram.h"
 #include <stdexcept> 
 
 namespace DesignPattern
