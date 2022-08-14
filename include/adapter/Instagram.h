@@ -1,10 +1,10 @@
-//! @file Dummy instagram app
-
 #ifndef ADAPTER_INSTAGRAM_H
 #define ADAPTER_INSTAGRAM_H
 
 #include <string>
 
+namespace DesignPattern
+{
 namespace Adapter
 {
 namespace Instagram
@@ -20,5 +20,6 @@ void post_video(const std::string& video);
 
 }; // namespace Instagram
 } // namespace Adapter
+} // namespace DesignPattern
 
 #endif //! ADAPTER_INSTAGRAM_H

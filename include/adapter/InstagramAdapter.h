@@ -1,11 +1,13 @@
-//! @file Adpater for the instagram code which will wrapp the logic of facbook in the common interface.
+//! Adapter for the instagram code which will wrap the logic of facebook in the common interface.
 
 #ifndef ADAPTER_INSTAGRAM_ADAPTER
 #define ADAPTER_INSTAGRAM_ADAPTER
 
 #include "ISocialAdapter.h"
-#include "Instagram.h"
 
+
+namespace DesignPattern
+{
 namespace Adapter
 {
 class InstagramAdapter : public ISocialAdapter
@@ -26,5 +28,6 @@ public:
 
 }; //! InstagramAdapter
 } // namespace Adapter
+} // namespace DesignPattern
 
 #endif // !ADAPTER_INSTAGRAM_ADAPTER

@@ -1,10 +1,10 @@
-//! @file Dummy facebook app
-
-#ifndef ADAPTER_FACBOOK_H
-#define ADAPTER_FACBOOK_H
+#ifndef ADAPTER_FACEBOOK_H
+#define ADAPTER_FACEBOOK_H
 
 #include <string>
 
+namespace DesignPattern
+{
 namespace Adapter
 {
 namespace Facebook
@@ -23,5 +23,5 @@ void post_facebook_text(const std::string& text);
 
 }; // namespace Facebook
 } // namespace Adapter
-
-#endif // !ADAPTER_FACBOOK_H
+} // namespace DesignPattern
+#endif // !ADAPTER_FACEBOOK_H

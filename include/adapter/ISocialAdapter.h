@@ -5,11 +5,14 @@
 
 #include <string>
 
+namespace DesignPattern
+{
 namespace Adapter
 {
 class ISocialAdapter
 {
 public:
+    virtual ~ISocialAdapter() = default;
     //! Posting an image.
     //! @param[in] img, The image url that you want to post.
     virtual void post_image(const std::string& img) = 0;
@@ -24,5 +27,5 @@ public:
 
 }; // ISocialAdapter
 } // namespace Adapter
-
+} // namespace DesignPattern
 #endif // !ADAPTER_I_SOCIAL_ADAPTER_H

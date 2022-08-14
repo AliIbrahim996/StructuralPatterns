@@ -1,6 +1,6 @@
-## adapter_design_pattern
+## StructuralPatterns
 
-This repository contains the source for My implementaion of adapter design pattern.
+This repository contains the source for My implementaion of structural design pattern.
 The repository structure is the standard project structure: internal sources for library build are in src, public includes are in the include folder and tests can be found in the test folder.
 ## 1 Development
 

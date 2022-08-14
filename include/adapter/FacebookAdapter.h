@@ -1,11 +1,12 @@
-//! @file Adpater for the facebook code which will wrapp the logic of facbook in the common interface.
+//! Adapter for the facebook code which will wrap the logic of facebook in the common interface.
 
 #ifndef ADAPTER_FACBOOK_ADAPTER_H
 #define ADAPTER_FACBOOK_ADAPTER_H
 
-#include "Facebook.h"
 #include "ISocialAdapter.h"
 
+namespace DesignPattern
+{
 namespace Adapter
 {
 
@@ -26,5 +27,5 @@ public:
 
 }; //! FacebookAdapter
 } // namespace Adapter
-
+} // namespace DesignPattern
 #endif // !ADAPTER_FACBOOK_ADAPTER_H
